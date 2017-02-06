@@ -1,0 +1,6 @@
+<menubar id="menubar" width="100%">
+	<menuitem label="Tambah Try Out Siswa" href="keloladatasiswa.zul" image="/asset/img/tambah.png"/>
+	<menuitem label="History Try Out Siswa" href="historytryoutsiswa.zul" image="/asset/img/history.png"/>
+    <menuitem label="Import Data Try Out Siswa" href="importfile.zul" image="/asset/img/import.png"/>
+	<menuitem label="Hasil Try Out Siswa" href="hasiltryoutsiswa.zul" image="/asset/img/hasil.png"/>
+</menubar>

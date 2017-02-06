@@ -1,0 +1,37 @@
+@CHARSET "ISO-8859-1";
+
+.word-shadow {
+	font-family: "Segoe UI";
+	src: local("Segoe UI Semilight");
+	font-size: 20px;
+	background: #ffffff;
+	color: #5183B8;
+}
+
+
+.caption {
+	color: blue;
+	font-family: Raleway;
+	font-size: 20px;
+}
+
+.text {
+	color: #00134d;
+	font-family: Raleway;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.mandatory {
+	color: red;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.footer {
+	color: #5183B8;
+	font-family: Raleway;
+	font-size: 17px;
+}

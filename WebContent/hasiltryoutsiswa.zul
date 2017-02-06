@@ -1,0 +1,64 @@
+<?page title="SLTP IP Baitul Maal" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<style src="/asset/css/custome.css" />
+	<window border="none" mode="highlighted" id="winHasilSiswa"
+		style="width:99%; height:99%;"
+		apply="controller.HasilTryoutSiswaController">
+		<include src="includes/header.zul"></include>
+		<separator />
+		<include src="includes/menu.zul"></include>
+		<separator />
+		<groupbox height="72%" mold="3d" closable="false">
+			<caption id="cap" label="Hasil Try Out Siswa" />
+			<div width="100%" height="460px" style="overflow:auto;">
+				<grid zclass="none">
+					<columns>
+						<column width="15%" hflex="min" align="right" />
+						<column />
+					</columns>
+					<rows>
+						<row>
+							<label value="Klasifikasi" />
+							<combobox id="cmbKlasifikasi"
+								readonly="true" width="30%" />
+						</row>
+						<row>
+							<label />
+							<div align="left" sclass="padding">
+								<button id="btnSearch" label="Search"
+									autodisable="self" />
+								<button id="btnClear" label="Clear"
+									autodisable="self" />
+							</div>
+						</row>
+					</rows>
+				</grid>
+				<listbox emptyMessage="Tidak ada data"
+					id="lbxHasilSiswa" mold="paging" pageSize="50" width="100%">
+					<listhead>
+						<listheader label="NIS"
+							align="center" hflex="min" />
+						<listheader label="Nama Siswa"
+							sort="auto(nama_siswa)" align="center" hflex="min" />
+						<listheader label="Try Out 1" align="center"
+							hflex="min" />
+						<listheader label="Try Out 2" align="center"
+							hflex="min" />
+						<listheader label="Try Out 3" align="center"
+							hflex="min" />
+						<listheader label="Try Out 4" align="center"
+							hflex="min" />
+						<listheader label="Try Out 5" align="center"
+							hflex="min" />
+						<listheader label="Klasifikasi" align="center"
+							hflex="min" />
+					</listhead>
+				</listbox>
+				<separator />
+				<separator />
+			</div>
+		</groupbox>
+		<separator />
+		<include src="includes/footer.zul"></include>
+	</window>
+</zk>

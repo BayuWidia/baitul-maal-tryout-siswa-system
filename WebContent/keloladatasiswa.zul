@@ -1,0 +1,408 @@
+<?page title="SLTP IP Baitul Maal" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<style src="/asset/css/custome.css" />
+	<window border="none" mode="highlighted" id="winKelolaDataSiswa"
+		style="width:99%; height:99%"
+		apply="controller.KelolaDataSiswaController">
+		<include src="includes/header.zul"></include>
+		<separator />
+		<include src="includes/menu.zul"></include>
+		<separator />
+		<groupbox height="72%" mold="3d" closable="false">
+			<caption id="cap" label="Tambah Try Out Siswa" />
+			<div width="100%" height="430px" style="overflow:auto;">
+				<grid zclass="none">
+					<columns>
+						<column width="15%" hflex="min" align="right" />
+						<column />
+					</columns>
+					<rows>
+						<row>
+							<div>
+								<label value="NIS" />
+								<label value="*" sclass="mandatory" />
+							</div>
+							<bandbox readonly="true" id="bdxNis"
+								width="40%">
+								<bandpopup>
+									<vbox>
+										<hbox>
+											<textbox id="txtSearchNis"
+												width="400px" placeholder="Nama Siswa"
+												sclass="font-uppercase" />
+											<button label="Search"
+												id="btnCariNis" />
+										</hbox>
+										<listbox id="lbxNis"
+											mold="paging" pageSize="30" width="470px">
+											<listhead>
+												<listheader label="NIS"
+													align="center" hflex="min" sort="auto(nis)" />
+												<listheader
+													label="NAMA SISWA" align="center" hflex="true"
+													sort="auto(nama_siswa)" />
+											</listhead>
+											<template name="model">
+												<listitem
+													value="${each}">
+													<listcell
+														label="${each.nis}" style="text-align:left" />
+													<listcell
+														label="${each.nama_siswa}" style="text-align:left" />
+												</listitem>
+											</template>
+										</listbox>
+									</vbox>
+								</bandpopup>
+							</bandbox>
+						</row>
+						<row>
+							<label value="Nama" />
+							<textbox readonly="true" id="txtNamaSiswa"
+								width="40%" placeholder="nama siswa belum diset" />
+						</row>
+					</rows>
+				</grid>
+				<tabbox>
+					<tabs id="tabs">
+						<tab id="A" label="Try Out 1" />
+						<tab id="B" label="Try Out 2" />
+						<tab id="C" label="Try Out 3" />
+						<tab id="D" label="Try Out 4" />
+						<tab id="E" label="Try Out 5" />
+					</tabs>
+					<tabpanels>
+						<tabpanel>
+							<grid zclass="none">
+								<columns>
+									<column width="5%" hflex="min"
+										align="right" />
+									<column width="40%" />
+									<column width="5%" hflex="min"
+										align="right" />
+									<column width="40%" />
+								</columns>
+								<rows>
+									<row>
+										<div>
+											<label value="Matematika" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxMtk1"
+											value="0" format="0.00" width="100%" />
+										<div>
+											<label
+												value="Bahasa Indonesia" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxInd1"
+											value="0" format="0.00" width="100%" />
+									</row>
+									<row>
+										<div>
+											<label value="Ipa" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxIpa1"
+											value="0" format="0.00" width="100%" />
+										<div>
+											<label
+												value="Bahasa Inggris" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxIng1"
+											value="0" format="0.00" width="100%" />
+									</row>
+									<row>
+										<label value="Rata - Rata" />
+										<decimalbox id="dcxrata1" value="0"
+											format="0.00" width="100%" readonly="true" />
+										<label value="Status" />
+										<textbox readonly="true"
+											id="txtStatus1" width="100%"
+											placeholder="status belum diset" />
+									</row>
+								</rows>
+							</grid>
+						</tabpanel>
+						<tabpanel>
+							<grid zclass="none">
+								<columns>
+									<column width="5%" hflex="min"
+										align="right" />
+									<column width="40%" />
+									<column width="5%" hflex="min"
+										align="right" />
+									<column width="40%" />
+								</columns>
+								<rows>
+									<row>
+										<div>
+											<label value="Matematika" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxMtk2"
+											value="0" format="0.00" width="100%" />
+										<div>
+											<label
+												value="Bahasa Indonesia" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxInd2"
+											value="0" format="0.00" width="100%" />
+									</row>
+									<row>
+										<div>
+											<label value="Ipa" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxIpa2"
+											value="0" format="0.00" width="100%" />
+										<div>
+											<label
+												value="Bahasa Inggris" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxIng2"
+											value="0" format="0.00" width="100%" />
+									</row>
+									<row>
+										<label value="Rata - Rata" />
+										<decimalbox id="dcxrata2" value="0"
+											format="0.00" width="100%" readonly="true" />
+										<label value="Status" />
+										<textbox readonly="true"
+											id="txtStatus2" width="100%"
+											placeholder="status belum diset" />
+									</row>
+								</rows>
+							</grid>
+						</tabpanel>
+						<tabpanel>
+							<grid zclass="none">
+								<columns>
+									<column width="5%" hflex="min"
+										align="right" />
+									<column width="40%" />
+									<column width="5%" hflex="min"
+										align="right" />
+									<column width="40%" />
+								</columns>
+								<rows>
+									<row>
+										<div>
+											<label value="Matematika" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxMtk3"
+											value="0" format="0.00" width="100%" />
+										<div>
+											<label
+												value="Bahasa Indonesia" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxInd3"
+											value="0" format="0.00" width="100%" />
+									</row>
+									<row>
+										<div>
+											<label value="Ipa" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxIpa3"
+											value="0" format="0.00" width="100%" />
+										<div>
+											<label
+												value="Bahasa Inggris" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxIng3"
+											value="0" format="0.00" width="100%" />
+									</row>
+									<row>
+										<label value="Rata - Rata" />
+										<decimalbox id="dcxrata3" value="0"
+											format="0.00" width="100%" readonly="true" />
+										<label value="Status" />
+										<textbox readonly="true"
+											id="txtStatus3" width="100%"
+											placeholder="status belum diset" />
+									</row>
+								</rows>
+							</grid>
+						</tabpanel>
+						<tabpanel>
+							<grid zclass="none">
+								<columns>
+									<column width="5%" hflex="min"
+										align="right" />
+									<column width="40%" />
+									<column width="5%" hflex="min"
+										align="right" />
+									<column width="40%" />
+								</columns>
+								<rows>
+									<row>
+										<div>
+											<label value="Matematika" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxMtk4"
+											value="0" format="0.00" width="100%" />
+										<div>
+											<label
+												value="Bahasa Indonesia" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxInd4"
+											value="0" format="0.00" width="100%" />
+									</row>
+									<row>
+										<div>
+											<label value="Ipa" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxIpa4"
+											value="0" format="0.00" width="100%" />
+										<div>
+											<label
+												value="Bahasa Inggris" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxIng4"
+											value="0" format="0.00" width="100%" />
+									</row>
+									<row>
+										<label value="Rata - Rata" />
+										<decimalbox id="dcxrata4" value="0"
+											format="0.00" width="100%" readonly="true" />
+										<label value="Status" />
+										<textbox readonly="true"
+											id="txtStatus4" width="100%"
+											placeholder="status belum diset" />
+									</row>
+								</rows>
+							</grid>
+						</tabpanel>
+						<tabpanel>
+							<grid zclass="none">
+								<columns>
+									<column width="5%" hflex="min"
+										align="right" />
+									<column width="40%" />
+									<column width="5%" hflex="min"
+										align="right" />
+									<column width="40%" />
+								</columns>
+								<rows>
+									<row>
+										<div>
+											<label value="Matematika" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxMtk5"
+											value="0" format="0.00" width="100%" />
+										<div>
+											<label
+												value="Bahasa Indonesia" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxInd5"
+											value="0" format="0.00" width="100%" />
+									</row>
+									<row>
+										<div>
+											<label value="Ipa" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxIpa5"
+											value="0" format="0.00" width="100%" />
+										<div>
+											<label
+												value="Bahasa Inggris" />
+											<label value="*"
+												sclass="mandatory" />
+										</div>
+										<decimalbox id="dcxIng5"
+											value="0" format="0.00" width="100%" />
+									</row>
+									<row>
+										<label value="Rata - Rata" />
+										<decimalbox id="dcxrata5" value="0"
+											format="0.00" width="100%" readonly="true" />
+										<label value="Status" />
+										<textbox readonly="true"
+											id="txtStatus5" width="100%"
+											placeholder="status belum diset" />
+									</row>
+								</rows>
+							</grid>
+						</tabpanel>
+					</tabpanels>
+				</tabbox>
+				<grid zclass="none">
+					<columns>
+						<column width="15%" hflex="min" align="right" />
+						<column />
+					</columns>
+					<rows>
+						<row zclass="none">
+							<label />
+							<label
+								value="Note: yang bertandakan * bersifat tidak boleh dikosongkan"
+								sclass="mandatory" style="font-style: italic" />
+						</row>
+						<row>
+							<label value="Tahun" />
+							<textbox id="txtTahun" width="33%"
+								readonly="true" />
+						</row>
+						<!-- <row>
+							<label value="Nilai Klasifikasi" />
+							<textbox id="txtNilaiKlasifikasi"
+								width="33%" readonly="true" />
+						</row> -->
+						<row>
+							<label value="Klasifikasi" />
+							<textbox id="txtKlasifikasi" width="33%"
+								readonly="true" />
+						</row>
+						<row>
+							<label />
+							<div align="left" sclass="padding">
+								<button id="btnView"
+									label="Process C4.5 Algorithm" autodisable="self" />
+								<button id="btnSave" label="Save"
+									autodisable="self" />
+								<button id="btnClear" label="Clear"
+									autodisable="self" />
+							</div>
+						</row>
+					</rows>
+				</grid>
+			</div>
+			<separator />
+		</groupbox>
+		<separator />
+		<include src="includes/footer.zul"></include>
+	</window>
+</zk>

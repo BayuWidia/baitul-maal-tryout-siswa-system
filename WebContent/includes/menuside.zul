@@ -1,0 +1,29 @@
+<vbox width="40%" height="72%">
+	<tree id="tree" apply="controller.treeController">
+		<treecols>
+			<treecol label="Menu" />
+		</treecols>
+		<treechildren>
+			<treeitem>
+				<treerow>
+					<treecell label="Tambah Try Out Siswa" image="/asset/img/tambah.png" id="treeCellTambah"/>
+				</treerow>
+			</treeitem>
+			<treeitem>
+				<treerow>
+					<treecell label="History Try Out Siswa" image="/asset/img/history.png" id="treeCellHistory"/>
+				</treerow>
+			</treeitem>
+			<treeitem>
+				<treerow>
+					<treecell label="Import Data Try Out Siswa" image="/asset/img/import.png" id="treeCellImport"/>
+				</treerow>
+			</treeitem>
+			<treeitem>
+				<treerow>
+					<treecell label="Hasil Try Out Siswa" image="/asset/img/hasil.png" id="treeCellHomeHasil"/>
+				</treerow>
+			</treeitem>
+		</treechildren>
+	</tree>
+</vbox>

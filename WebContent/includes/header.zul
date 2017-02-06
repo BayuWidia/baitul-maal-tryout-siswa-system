@@ -1,0 +1,25 @@
+
+<groupbox zclass="none">
+	<grid zclass="none">
+		<columns>
+			<column hflex="min" align="right"/>
+			<column />
+		</columns>
+		<rows>
+			<row zclass="none">
+				<image src="/asset/img/logo-smp.jpg" style="margin-left: 83%;"></image>
+				
+				<vbox id="result">
+			        <label id="lb1" zclass="word-shadow"></label>
+			        <label id="lb2" multiline="false" zclass="word-shadow"/>
+			        <label id="lb3" zclass="word-shadow"/>
+			        <zscript><![CDATA[
+			            lb1.value = "    Jl. Pesantren No.60B, Jurang Manggu Tim";
+			            lb2.value = "    Pd. Aren, Kota Tangerang Selatan, Banten 15222, Indonesia";
+			            lb3.value = "    Telepon: +62 21 7358755";
+			        ]]></zscript>
+			    </vbox>
+			</row>
+		</rows>
+	</grid>
+</groupbox>

@@ -1,0 +1,16 @@
+<?page title="SLTP Baitul Maal" contentType="text/html;charset=UTF-8"?>
+<zk>
+<style src="/asset/css/custome.css"/>
+<window border="normal" mode="highlighted" 
+	style="width:99%; height:99%;" apply="controller.DashboardController">
+	<include src="includes/header.zul"></include>
+	<separator/>
+	<include src="includes/menu.zul"></include>
+	<separator/>
+	<groupbox height="72%">
+		<image src="/asset/img/Untitled4.png" style="margin-left:25%; padding-top:3%"></image>
+	</groupbox>
+	<separator/>
+	<include src="includes/footer.zul"></include>
+</window>
+</zk>
